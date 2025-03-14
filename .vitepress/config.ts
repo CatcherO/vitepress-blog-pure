@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { themeConfig } from './theme'
+import baseConfig from './theme/config'
 
 export default defineConfig({
     title: 'Vitepress blog',
@@ -7,7 +7,8 @@ export default defineConfig({
     cacheDir: './node_modules/vitepress_cache',
     description: 'vitepress,blog,blog-theme',
     ignoreDeadLinks: true,
-    themeConfig: themeConfig as any,
+    themeConfig: baseConfig as any,
+    // extends: baseConfig as any,
     srcExclude: ['README.md'], // exclude the README.md , needn't to compiler
 
     vite: {
