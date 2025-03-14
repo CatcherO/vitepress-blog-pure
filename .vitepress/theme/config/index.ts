@@ -1,6 +1,6 @@
 import { getPosts } from './serverUtils'
 
-const pageSize = 10
+const pageSize = 1
 
 export default {
     posts: await getPosts(pageSize),
